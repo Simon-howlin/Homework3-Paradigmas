@@ -1,3 +1,15 @@
-main
+# Ejecutables
+ej1
+ej2
+ej3
+
+# Archivos de datos generados
 *.dat
 *.txt
+
+# Archivos de respaldo o temporales
+*~
+*.o
+
+# Carpeta de configuración del editor
+.vscode/

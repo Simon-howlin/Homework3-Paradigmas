@@ -7,7 +7,7 @@ Presion::Presion(const Presion& other): MedicionBase(other.getTiempo()), presion
 
 void Presion::imprimir() const {
     cout << "====== Presion ======" << endl;
-    cout << "Presión Estática: " << presionEstatica << "\nDinámica: " << presionDinamica << "\nTiempo: " << getTiempo() << endl;
+    cout << "Presión Estatica: " << presionEstatica << "\nDinamica: " << presionDinamica << "\nTiempo: " << getTiempo() << endl;
 }
 
 void Posicion::serializar(ofstream& out) const {

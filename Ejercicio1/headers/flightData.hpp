@@ -13,6 +13,8 @@ public:
     Presion presion; //q
 
     SaveFlightData(const Posicion& p, const Presion& q);
+    ~SaveFlightData() = default;
+
     void imprimir() const override;
     void serializar(ofstream& out) const override;
     void deserializar(ifstream& in) override;

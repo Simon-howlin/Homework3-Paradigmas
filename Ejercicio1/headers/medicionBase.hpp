@@ -5,7 +5,7 @@
 #include <memory>
 using namespace std;
 
-#include "imediciones.hpp"
+#include "Imediciones.hpp"
 
 class MedicionBase: public IMediciones {
 protected:
@@ -13,11 +13,13 @@ protected:
 
 public: 
     MedicionBase(float t);
+    virtual ~MedicionBase() = default;
+
     float getTiempo() const;
     void serializar(ofstream& out) const override;
     void deserializar(ifstream& in) override;
+    
     virtual void imprimir() const = 0;
-    virtual ~MedicionBase() = default;
 };
 
 #endif

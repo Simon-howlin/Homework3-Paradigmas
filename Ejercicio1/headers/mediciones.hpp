@@ -13,10 +13,11 @@ public:
 
     Presion(float p, float q, float t);
     Presion(const Presion& other);
+    ~Presion() = default;
+
     void imprimir() const override;
     void serializar(ofstream& out) const override;
     void deserializar(ifstream& in) override;
-    ~Presion() = default;
 };
 
 class Posicion: public MedicionBase {
@@ -27,10 +28,11 @@ public:
 
     Posicion(float lat, float lon, float alt, float t);
     Posicion(const Posicion& other);
+    ~Posicion() = default;
+    
     void imprimir() const override;
     void serializar(ofstream& out) const override;
     void deserializar(ifstream& in) override;
-    ~Posicion() = default;
 };
 
 #endif
