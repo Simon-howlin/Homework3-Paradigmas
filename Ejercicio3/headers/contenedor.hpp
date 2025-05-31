@@ -24,7 +24,7 @@ public:
             out << "[";
             for (size_t i = 0; i < elems.size(); ++i) {
                 out << elems[i];
-                if (i != elems.size() - 1) out << ", ";
+                if (i != elems.size() - 1) out << ",";
             }
             out << "]";
         }
@@ -32,22 +32,22 @@ public:
             out << "[";
             for (size_t i = 0; i < elems.size(); ++i) {
                 out << "\"" << elems[i] << "\"";
-                if (i != elems.size() - 1) out << ", ";
+                if (i != elems.size() - 1) out << ",";
             }
             out << "]";
         }
         else if constexpr (is_same_v<T, vector<vector<int>>>) {
             out << "[\n";
             for (size_t i = 0; i < elems[0].size(); ++i) {
-                out << "         [";
+                out << "          [";
                 for (size_t j = 0; j < elems[0][i].size(); ++j) {
                     out << elems[0][i][j];
-                    if (j != elems[0][i].size() - 1) out << ", ";
+                    if (j != elems[0][i].size() - 1) out << ",";
                 }
                 out << "]";
                 if (i != elems[0].size() - 1) out << ",\n";
             }
-            out << "\n        ]";
+            out << "\n         ]";
         }
         else {
             return "\"tipo no procesado\"";

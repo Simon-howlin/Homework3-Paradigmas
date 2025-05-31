@@ -7,6 +7,7 @@ int main() {
 
     cout << "\n" << endl; // para que no quede pegado el ./ej1
 
+    // Imprimir individualmente
     posicion.imprimir();
     presion.imprimir();
 
@@ -19,13 +20,13 @@ int main() {
     vuelo.serializar(out);
     out.close();
 
-    // Deserializar en otro objeto
+    // Deserializar en otro objeto (misma pres y pos)
     SaveFlightData vuelo2(posicion, presion);
     ifstream in("vuelo.dat", ios::binary);
     vuelo2.deserializar(in);
     in.close();
 
-    cout << "\n=== Datos deserializados ===\n";
+    cout << "\n====== Datos deserializados ======";
     vuelo2.imprimir();
 
     cout << "\n" << endl; // para que no quede pegado el rm -rf ej1
