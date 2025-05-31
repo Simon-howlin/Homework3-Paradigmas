@@ -9,6 +9,6 @@ ej2:
 	rm -rf ej2
 
 ej3:
-	g++ -std=c++17 -Wall -Wextra -Werror -I Ejercicio3/headers -o ej3 Ejercicio3/examples/main.cpp
+	g++ -std=c++17 -Wall -Wextra -Werror -I Ejercicio3/headers -o ej3 Ejercicio3/examples/main.cpp Ejercicio3/sources/*.cpp
 	./ej3
 	rm -rf ej3
