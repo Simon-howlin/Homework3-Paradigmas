@@ -1,4 +1,6 @@
-#pragma once
+#ifndef IMEDICIONES_HPP
+#define IMEDICIONES_HPP
+
 #include <fstream>
 using namespace std;
 
@@ -8,3 +10,5 @@ public:
     virtual void deserializar(ifstream& in) = 0;
     virtual ~IMediciones() = default;
 };
+
+#endif
